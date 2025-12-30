@@ -1,10 +1,12 @@
 
-import WeddingHeroSection from "./components/WeddingHeroSection.jsx";
+import HeroSection from "./components/HeroSection.jsx";
+import ServicesSection from "./components/ServicesSection.jsx";
 
 function App() {
   return (
     <>
-    <WeddingHeroSection/>
+    <HeroSection/>
+    <ServicesSection/>
     </>
   );
 }
