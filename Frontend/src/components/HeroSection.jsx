@@ -229,3 +229,134 @@ const HeroSection = () => {
 export default HeroSection;
 
 
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import { Menu, Play } from 'lucide-react';
+
+// const HeroSection = () => {
+//   const [isLoaded, setIsLoaded] = useState(false);
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+//   const backgroundVideos = [
+//     "videos/video4.mp4",
+//     "videos/video2.mp4",
+//     "videos/video3.mp4",
+//   ];
+
+//   const [bgVideo, setBgVideo] = useState("");
+
+//   useEffect(() => {
+//     setTimeout(() => setIsLoaded(true), 100);
+//     const randomVideo = backgroundVideos[Math.floor(Math.random() * backgroundVideos.length)];
+//     setBgVideo(`${randomVideo}?v=${Date.now()}`);
+//   }, []);
+
+//   return (
+//     <>
+//       {/* Import the Slab Serif font for that exact look */}
+//       <style>{`
+//         @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        
+//         .slab-font { font-family: 'Arvo', serif; }
+//         .serif-font { font-family: 'Playfair Display', serif; }
+//       `}</style>
+
+//       <section className="relative min-h-screen w-full overflow-hidden bg-[#e61e2b]">
+//         {/* Background Layers */}
+//         <div className="absolute inset-0 z-0">
+//           {/* Base Color */}
+//           <div className="absolute inset-0 bg-[#e61e2b]" />
+
+//           {/* VIDEO with Multiply effect to create the "Red Duo-tone" look */}
+//           <div className={`absolute inset-0 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+//             <video
+//               key={bgVideo}
+//               src={bgVideo}
+//               autoPlay
+//               muted
+//               loop
+//               playsInline
+//               className="absolute w-full h-full object-cover grayscale"
+//               style={{ mixBlendMode: 'multiply' }}
+//             />
+//             {/* Secondary overlay to deepen the red */}
+//             <div className="absolute inset-0 bg-[#e61e2b] mix-blend-color" />
+//           </div>
+//         </div>
+
+//         {/* Header/Navigation */}
+//         <header className="relative z-30 flex items-center justify-between px-6 lg:px-20 py-8">
+//           <div className="flex flex-col items-center">
+//              <img 
+//                src="images/E365_Celebrations_Logo.png" 
+//                alt="Mary's Bridal" 
+//                className="h-16 w-auto brightness-0 invert" // Keeping logo white
+//              />
+//           </div>
+
+//           <nav className="hidden md:flex items-center space-x-8">
+//             {['About us', 'Collections', 'Accessories', 'Shoes', 'Services', 'Contact us'].map((item) => (
+//               <a key={item} href="#" className="text-white text-sm font-medium hover:opacity-80 transition-opacity uppercase tracking-wider">
+//                 {item}
+//               </a>
+//             ))}
+//           </nav>
+
+//           <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+//             <Menu className="w-8 h-8" />
+//           </button>
+//         </header>
+
+//         {/* Main Content */}
+//         <div className="relative z-20 flex flex-col items-center justify-center h-[calc(100vh-100px)] text-center px-4">
+//           <h1 className={`text-white text-6xl md:text-8xl lg:text-[140px] slab-font leading-none mb-6 transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+//             Bridal Gowns
+//           </h1>
+          
+//           <p className={`text-white text-lg md:text-xl serif-font italic mb-10 transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+//             You'll be the most beautiful bride on your special day!
+//           </p>
+
+//           <div className={`flex flex-col sm:flex-row gap-4 items-center transition-all duration-1000 delay-500 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+//             <button className="bg-white text-black px-10 py-3 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-gray-100 transition-colors">
+//               Collections
+//             </button>
+//             <button className="flex items-center gap-2 border border-white text-white px-8 py-3 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-white/10 transition-colors">
+//               <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center">
+//                 <Play className="w-3 h-3 fill-white" />
+//               </div>
+//               Play Video
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Improved Layered Wave Section */}
+//         <div className="absolute bottom-0 left-0 w-full z-20 leading-[0]">
+//           <svg viewBox="0 0 1440 250" preserveAspectRatio="none" className="w-full h-[120px] md:h-[200px]">
+//             {/* Dark/Grey Layer */}
+//             <path 
+//               d="M0,150 C400,280 1000,50 1440,150 L1440,250 L0,250 Z" 
+//               fill="#222" 
+//               className="opacity-40"
+//             />
+//             {/* Red Gradient Layer */}
+//             <path 
+//               d="M0,180 C300,280 1100,80 1440,180 L1440,250 L0,250 Z" 
+//               fill="#9e1b23" 
+//             />
+//             {/* Main White Wave */}
+//             <path 
+//               d="M0,210 C350,300 1100,100 1440,210 L1440,250 L0,250 Z" 
+//               fill="white" 
+//             />
+//           </svg>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default HeroSection;
